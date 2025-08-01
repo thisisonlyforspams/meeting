@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Meeting</title>
+</head>
+<body>
+    <h1>Edit Meeting</h1>
+    <form method="POST">
+        <input type="text" name="title" value="{{ meeting.title }}" required><br>
+        <input type="date" name="date" value="{{ meeting.date }}" required><br>
+        <input type="time" name="time" value="{{ meeting.time }}" required><br>
+        <textarea name="brief" required>{{ meeting.brief }}</textarea><br>
+        <textarea name="minutes" required>{{ meeting.minutes }}</textarea><br>
+        <button type="submit">Update Meeting</button>
+    </form>
+</body>
+</html>
