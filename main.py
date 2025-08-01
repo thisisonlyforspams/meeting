@@ -8,10 +8,14 @@ meetings = []
 def index():
     if request.method == 'POST':
         title = request.form['title']
+        date = request.form['date']
+        time = request.form['time']
         brief = request.form['brief']
         minutes = request.form['minutes']
         meetings.append({
             'title': title,
+            'date': date,
+            'time': time,
             'brief': brief,
             'minutes': minutes
         })
