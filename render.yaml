@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: meeting-manager
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: gunicorn main:app
+    runtime: python
