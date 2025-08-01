@@ -20,7 +20,9 @@
             <strong>{{ meeting.title }}</strong><br>
             📅 {{ meeting.date }} 🕒 {{ meeting.time }}<br>
             Brief: {{ meeting.brief }}<br>
-            Minutes: {{ meeting.minutes }}
+            Minutes: {{ meeting.minutes }}<br>
+            <a href="/edit/{{ meeting.id }}">Edit</a> |
+            <a href="/delete/{{ meeting.id }}" onclick="return confirm('Delete this meeting?')">Delete</a>
         </li>
     {% endfor %}
 </ul>
