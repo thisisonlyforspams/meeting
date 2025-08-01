@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meeting Manager</title>
+</head>
+<body>
+    <h1>Meeting Scheduler</h1>
+    <form method="POST">
+        <input type="text" name="title" placeholder="Meeting Title" required><br>
+        <textarea name="brief" placeholder="Brief" required></textarea><br>
+        <textarea name="minutes" placeholder="Minutes" required></textarea><br>
+        <button type="submit">Add Meeting</button>
+    </form>
+
+    <h2>Meetings</h2>
+    <ul>
+        {% for meeting in meetings %}
+            <li>
+                <strong>{{ meeting.title }}</strong><br>
+                Brief: {{ meeting.brief }}<br>
+                Minutes: {{ meeting.minutes }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
