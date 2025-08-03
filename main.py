@@ -102,8 +102,12 @@ import base64
 import requests
 from datetime import datetime
 
+import base64
+import requests
+from datetime import datetime
 import os
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN") 
+
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 GITHUB_REPO = "thisisonlyforspams/meeting"
 GITHUB_FILE_PATH = "data.json"
 GITHUB_BRANCH = "main"
@@ -115,11 +119,11 @@ def push_to_github():
 
     api_url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{GITHUB_FILE_PATH}"
 
-    # Get the current file SHA to update it
     headers = {
         "Authorization": f"Bearer {GITHUB_TOKEN}",
         "Accept": "application/vnd.github+json"
     }
+
     response = requests.get(api_url, headers=headers)
     if response.status_code == 200:
         sha = response.json()["sha"]
