@@ -1,3 +1,7 @@
+import pandas as pd
+from flask import send_file
+from io import BytesIO
+
 from flask import Flask, render_template, request, redirect
 import json, os, base64, requests
 from datetime import datetime
@@ -135,6 +139,25 @@ def view_meetings():
         ]
 
     return render_template('view.html', meetings=meetings, query=query)
+@app.route('/download/excel')
+def download_excel():
+    meetings = load_meetings()
+    if not meetings:
+        return "No meetings to export."
+
+    # Convert to DataFrame
+    df = pd.DataFrame(meetings)
+
+    # Write to in-memory Excel file
+    output = BytesIO()
+    with pd.ExcelWriter(output, engine='openpyxl') as writer:
+        df.to_excel(writer, index=False, sheet_name='Meetings')
+
+    output.seek(0)
+    return send_file(output,
+                     download_name="meetings.xlsx",
+                     as_attachment=True,
+                     mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
 
 if __name__ == '__main__':
