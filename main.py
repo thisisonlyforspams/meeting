@@ -121,7 +121,7 @@ def print_schedule():
 
     return render_template("print.html", schedule=schedule, days=days)
 
-Add print route and backup logic
+# Add print route and backup logic
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=81)
 
