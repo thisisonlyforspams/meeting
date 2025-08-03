@@ -97,3 +97,45 @@ def push_to_github():
         print('✅ Successfully pushed to GitHub.')
     else:
         print(f'❌ Failed to push: {response.status_code}, {response.text}')
+
+import base64
+import requests
+from datetime import datetime
+
+import os
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN") 
+GITHUB_REPO = "thisisonlyforspams/meeting"
+GITHUB_FILE_PATH = "data.json"
+GITHUB_BRANCH = "main"
+
+def push_to_github():
+    with open("data.json", "rb") as file:
+        content = file.read()
+        encoded_content = base64.b64encode(content).decode()
+
+    api_url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{GITHUB_FILE_PATH}"
+
+    # Get the current file SHA to update it
+    headers = {
+        "Authorization": f"Bearer {GITHUB_TOKEN}",
+        "Accept": "application/vnd.github+json"
+    }
+    response = requests.get(api_url, headers=headers)
+    if response.status_code == 200:
+        sha = response.json()["sha"]
+    else:
+        sha = None
+
+    data = {
+        "message": f"Auto backup: {datetime.utcnow().isoformat()}",
+        "content": encoded_content,
+        "branch": GITHUB_BRANCH
+    }
+    if sha:
+        data["sha"] = sha
+
+    push_response = requests.put(api_url, headers=headers, json=data)
+    if push_response.status_code not in [200, 201]:
+        print("❌ GitHub push failed:", push_response.text)
+    else:
+        print("✅ data.json successfully pushed to GitHub")
