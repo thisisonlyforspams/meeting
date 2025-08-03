@@ -14,6 +14,7 @@ def load_meetings():
 def save_meetings(meetings):
     with open(DATA_FILE, 'w') as f:
         json.dump(meetings, f, indent=4)
+push_to_github()
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -54,3 +55,45 @@ def edit(id):
         save_meetings(meetings)
         return redirect('/')
     return render_template('edit.html', meeting=meeting)
+import base64
+import requests
+from datetime import datetime
+
+GITHUB_TOKEN = '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'  # ← replace this
+GITHUB_USERNAME = 'thisisonlyforspams'
+REPO_NAME = 'meeting'
+BRANCH = 'main'  # or 'master' if that’s your default
+
+def push_to_github():
+    file_path = 'data.json'
+    github_api_url = f'https://api.github.com/repos/{GITHUB_USERNAME}/{REPO_NAME}/contents/{file_path}'
+
+    # Read local file
+    with open(file_path, 'rb') as f:
+        content = f.read()
+        encoded_content = base64.b64encode(content).decode('utf-8')
+
+    # Get the current SHA of the file from GitHub
+    headers = {
+        'Authorization': f'token {GITHUB_TOKEN}',
+        'Accept': 'application/vnd.github+json'
+    }
+    response = requests.get(github_api_url, headers=headers)
+    sha = response.json().get('sha') if response.status_code == 200 else None
+
+    # Prepare commit data
+    data = {
+        'message': f'Auto backup: {datetime.now().isoformat()}',
+        'content': encoded_content,
+        'branch': BRANCH
+    }
+    if sha:
+        data['sha'] = sha
+
+    # PUT to GitHub
+    response = requests.put(github_api_url, headers=headers, json=data)
+
+    if response.status_code in [200, 201]:
+        print('✅ Successfully pushed to GitHub.')
+    else:
+        print(f'❌ Failed to push: {response.status_code}, {response.text}')
