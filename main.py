@@ -158,6 +158,39 @@ def download_excel():
                      download_name="meetings.xlsx",
                      as_attachment=True,
                      mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+from reportlab.lib.pagesizes import A4
+from reportlab.pdfgen import canvas
+from io import BytesIO
+
+@app.route('/download/pdf')
+def download_pdf():
+    meetings = load_meetings()
+
+    buffer = BytesIO()
+    c = canvas.Canvas(buffer, pagesize=A4)
+    width, height = A4
+
+    y = height - 50
+    c.setFont("Helvetica-Bold", 16)
+    c.drawString(50, y, "Meeting Schedule")
+    y -= 30
+
+    c.setFont("Helvetica", 12)
+    for m in meetings:
+        text = f"{m['date']} {m['time']} - {m['title']}"
+        brief = f"Brief: {m['brief']}"
+        minutes = f"Minutes: {m['minutes']}"
+        for line in [text, brief, minutes, ""]:
+            c.drawString(50, y, line)
+            y -= 18
+            if y < 50:
+                c.showPage()
+                y = height - 50
+                c.setFont("Helvetica", 12)
+
+    c.save()
+    buffer.seek(0)
+    return send_file(buffer, as_attachment=True, download_name="meetings.pdf", mimetype='application/pdf')
 
 
 if __name__ == '__main__':
