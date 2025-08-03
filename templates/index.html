@@ -44,7 +44,11 @@
             <td>{{ m.time }}</td>
             <td>{{ m.brief }}</td>
             <td>{{ m.minutes }}</td>
-            <td><a href="/delete/{{ loop.index0 }}">Delete</a></td>
+            <td>
+                <a href="/edit/{{ m.id }}">Edit</a> |
+                <a href="/delete/{{ m.id }}" onclick="return confirm('Delete this meeting?')">Delete</a>
+            </td>
+
         </tr>
         {% endfor %}
     </table>
