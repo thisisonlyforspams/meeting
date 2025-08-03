@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Printable 3-Day Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .day-top {
+            margin-bottom: 30px;
+            border-bottom: 2px solid black;
+        }
+        .day-column {
+            width: 48%;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 2%;
+        }
+        .day-column:last-child {
+            margin-right: 0;
+        }
+        h2 {
+            margin-bottom: 5px;
+            border-bottom: 1px dashed gray;
+        }
+        .meeting {
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+        @media print {
+            body {
+                margin: 0;
+            }
+            .noprint {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="noprint">
+        <button onclick="window.print()">🖨️ Print Page</button>
+        <a href="/">🔙 Back</a>
+    </div>
+
+    {% if days|length > 0 %}
+        <div class="day-top">
+            <h2>{{ days[0] }}</h2>
+            {% for m in schedule[days[0]] %}
+                <div class="meeting">
+                    <strong>{{ m.title }}</strong><br>
+                    {{ m.time }} - {{ m.brief }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <div>
+        {% if days|length > 1 %}
+        <div class="day-column">
+            <h2>{{ days[1] }}</h2>
+            {% for m in schedule[days[1]] %}
+                <div class="meeting">
+                    <strong>{{ m.title }}</strong><br>
+                    {{ m.time }} - {{ m.brief }}
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if days|length > 2 %}
+        <div class="day-column">
+            <h2>{{ days[2] }}</h2>
+            {% for m in schedule[days[2]] %}
+                <div class="meeting">
+                    <strong>{{ m.title }}</strong><br>
+                    {{ m.time }} - {{ m.brief }}
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+Add print.html for 3-day schedule view
