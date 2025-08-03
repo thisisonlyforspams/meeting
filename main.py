@@ -120,8 +120,23 @@ def print_schedule():
             schedule[m['date']].append(m)
 
     return render_template("print.html", schedule=schedule, days=days)
+    
+@app.route('/view')
+def view_meetings():
+    query = request.args.get('q', '').lower()
+    meetings = load_meetings()
 
-# Add print route and backup logic
+    if query:
+        meetings = [
+            m for m in meetings if
+            query in m['title'].lower() or
+            query in m['brief'].lower() or
+            query in m['minutes'].lower()
+        ]
+
+    return render_template('view.html', meetings=meetings, query=query)
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=81)
 
