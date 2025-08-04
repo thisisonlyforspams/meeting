@@ -2,15 +2,20 @@
 <html>
 <head>
     <title>Edit Meeting</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        input, textarea { width: 100%; margin: 10px 0; padding: 8px; }
+        button { padding: 10px 20px; }
+    </style>
 </head>
 <body>
-    <h1>Edit Meeting</h1>
-    <form method="POST">
-        <input type="text" name="title" value="{{ meeting.title }}" required><br>
-        <input type="date" name="date" value="{{ meeting.date }}" required><br>
-        <input type="time" name="time" value="{{ meeting.time }}" required><br>
-        <textarea name="brief" required>{{ meeting.brief }}</textarea><br>
-        <textarea name="minutes" required>{{ meeting.minutes }}</textarea><br>
+    <h2>Edit Meeting</h2>
+    <form method="post">
+        <input type="text" name="title" value="{{ meeting.title }}" required>
+        <input type="date" name="date" value="{{ meeting.date }}" required>
+        <input type="time" name="time" value="{{ meeting.time }}" required>
+        <textarea name="brief" rows="2">{{ meeting.brief }}</textarea>
+        <textarea name="minutes" rows="3">{{ meeting.minutes }}</textarea>
         <button type="submit">Update Meeting</button>
     </form>
 </body>
