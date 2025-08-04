@@ -1,12 +1,14 @@
 import pandas as pd
-from flask import send_file
+from flask import Flask, render_template, request, redirect, session, url_for, flash, send_file
 from io import BytesIO
-
-from flask import Flask, render_template, request, redirect
 import json, os, base64, requests
 from datetime import datetime
+from functools import wraps
+from reportlab.lib.pagesizes import A4
+from reportlab.pdfgen import canvas
 
 app = Flask(__name__)
+app.secret_key = os.getenv("SECRET_KEY") or "devsecret"  # for session handling
 DATA_FILE = 'data.json'
 
 # GitHub Settings
@@ -19,12 +21,18 @@ GITHUB_BRANCH = "main"
 def load_meetings():
     if os.path.exists(DATA_FILE):
         with open(DATA_FILE, 'r') as f:
-            return json.load(f)
+            data = json.load(f)
+        return data.get('meetings', [])
     return []
 
 def save_meetings(meetings):
+    data = {}
+    if os.path.exists(DATA_FILE):
+        with open(DATA_FILE, 'r') as f:
+            data = json.load(f)
+    data['meetings'] = meetings
     with open(DATA_FILE, 'w') as f:
-        json.dump(meetings, f, indent=4)
+        json.dump(data, f, indent=4)
     push_to_github()
 
 # --------- GitHub Backup ---------
@@ -39,7 +47,6 @@ def push_to_github():
         "Accept": "application/vnd.github+json"
     }
 
-    # Get file SHA (needed for update)
     response = requests.get(api_url, headers=headers)
     sha = response.json().get("sha") if response.status_code == 200 else None
 
@@ -57,13 +64,47 @@ def push_to_github():
     else:
         print("✅ Backup pushed to GitHub")
 
-# --------- Flask Routes ---------
+# --------- Authentication ---------
+def login_required(f):
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        if 'user' not in session:
+            return redirect('/login')
+        return f(*args, **kwargs)
+    return wrapper
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        with open(DATA_FILE, 'r') as f:
+            data = json.load(f)
+        users = data.get('users', [])
+        user = next(
+            (u for u in users if u['username'] == username and u['password'] == password), None)
+        if user:
+            session['user'] = username
+            return redirect('/')
+        else:
+            flash('Invalid credentials')
+            return redirect('/login')
+    return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('user', None)
+    return redirect('/login')
+
+# --------- Routes ---------
 @app.route('/')
+@login_required
 def index():
     meetings = load_meetings()
     return render_template('index.html', meetings=meetings)
 
 @app.route('/add', methods=['POST'])
+@login_required
 def add():
     meetings = load_meetings()
     new_meeting = {
@@ -79,6 +120,7 @@ def add():
     return redirect('/')
 
 @app.route('/delete/<int:id>')
+@login_required
 def delete(id):
     meetings = load_meetings()
     meetings = [m for m in meetings if m['id'] != id]
@@ -88,6 +130,7 @@ def delete(id):
     return redirect('/')
 
 @app.route('/edit/<int:id>', methods=['GET', 'POST'])
+@login_required
 def edit(id):
     meetings = load_meetings()
     meeting = next((m for m in meetings if m['id'] == id), None)
@@ -101,80 +144,64 @@ def edit(id):
         return redirect('/')
     return render_template('edit.html', meeting=meeting)
 
-
 @app.route('/print')
+@login_required
 def print_schedule():
     meetings = load_meetings()
-
-    # Sort meetings by date
     sorted_meetings = sorted(meetings, key=lambda m: m['date'])
-
-    # Pick first 3 unique days
     days = []
     for m in sorted_meetings:
         if m['date'] not in days:
             days.append(m['date'])
         if len(days) == 3:
             break
-
-    # Group meetings by day
     schedule = {day: [] for day in days}
     for m in sorted_meetings:
         if m['date'] in schedule:
             schedule[m['date']].append(m)
-
     return render_template("print.html", schedule=schedule, days=days)
-    
+
 @app.route('/view')
+@login_required
 def view_meetings():
     query = request.args.get('q', '').lower()
     meetings = load_meetings()
-
     if query:
         meetings = [
-            m for m in meetings if
-            query in m['title'].lower() or
-            query in m['brief'].lower() or
-            query in m['minutes'].lower()
+            m for m in meetings if query in m['title'].lower()
+            or query in m['brief'].lower() or query in m['minutes'].lower()
         ]
-
     return render_template('view.html', meetings=meetings, query=query)
+
 @app.route('/download/excel')
+@login_required
 def download_excel():
     meetings = load_meetings()
     if not meetings:
         return "No meetings to export."
-
-    # Convert to DataFrame
     df = pd.DataFrame(meetings)
-
-    # Write to in-memory Excel file
     output = BytesIO()
     with pd.ExcelWriter(output, engine='openpyxl') as writer:
         df.to_excel(writer, index=False, sheet_name='Meetings')
-
     output.seek(0)
-    return send_file(output,
-                     download_name="meetings.xlsx",
-                     as_attachment=True,
-                     mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
-from reportlab.lib.pagesizes import A4
-from reportlab.pdfgen import canvas
-from io import BytesIO
+    return send_file(
+        output,
+        download_name="meetings.xlsx",
+        as_attachment=True,
+        mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+    )
 
 @app.route('/download/pdf')
+@login_required
 def download_pdf():
     meetings = load_meetings()
-
     buffer = BytesIO()
     c = canvas.Canvas(buffer, pagesize=A4)
     width, height = A4
-
     y = height - 50
     c.setFont("Helvetica-Bold", 16)
     c.drawString(50, y, "Meeting Schedule")
     y -= 30
-
     c.setFont("Helvetica", 12)
     for m in meetings:
         text = f"{m['date']} {m['time']} - {m['title']}"
@@ -187,13 +214,12 @@ def download_pdf():
                 c.showPage()
                 y = height - 50
                 c.setFont("Helvetica", 12)
-
     c.save()
     buffer.seek(0)
-    return send_file(buffer, as_attachment=True, download_name="meetings.pdf", mimetype='application/pdf')
-
+    return send_file(buffer,
+                     as_attachment=True,
+                     download_name="meetings.pdf",
+                     mimetype='application/pdf')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=81)
-
-
