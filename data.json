@@ -5,30 +5,5 @@
             "password": "12345678"
         }
     ],
-    "meetings": [
-        {
-            "id": 0,
-            "title": "jljl;",
-            "date": "2023-03-10",
-            "time": "02:32",
-            "brief": "sdf",
-            "minutes": "sdf"
-        },
-        {
-            "id": 1,
-            "title": "sdfsd",
-            "date": "2023-03-11",
-            "time": "02:33",
-            "brief": "fsd",
-            "minutes": "vvdv"
-        },
-        {
-            "id": 2,
-            "title": "sdf",
-            "date": "2023-03-12",
-            "time": "02:33",
-            "brief": "sdf",
-            "minutes": "xc"
-        }
-    ]
+    "meetings": []
 }
