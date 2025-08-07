@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choose Date Range</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 8px 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Choose a Date Range to Print</h2>
+    <form method="POST">
+        <label for="start">Start Date:</label>
+        <input type="date" name="start" required>
+
+        <label for="end">End Date:</label>
+        <input type="date" name="end" required>
+
+        <button type="submit">📄 Show Schedule</button>
+        <a href="/">🔙 Back</a>
+    </form>
+</body>
+</html>
