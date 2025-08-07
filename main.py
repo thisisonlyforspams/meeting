@@ -143,23 +143,73 @@ def edit(id):
         save_meetings(meetings)
         return redirect('/')
     return render_template('edit.html', meeting=meeting)
-
-@app.route('/print')
+@app.route("/print", methods=["GET"])
 @login_required
 def print_schedule():
     meetings = load_meetings()
-    sorted_meetings = sorted(meetings, key=lambda m: m['date'])
-    days = []
-    for m in sorted_meetings:
-        if m['date'] not in days:
-            days.append(m['date'])
-        if len(days) == 3:
-            break
-    schedule = {day: [] for day in days}
-    for m in sorted_meetings:
-        if m['date'] in schedule:
-            schedule[m['date']].append(m)
+    mode = request.args.get("mode")
+
+    if mode == "range":
+        start_date = request.args.get("start_date")
+        end_date = request.args.get("end_date")
+
+        if not start_date or not end_date:
+            return "Start and end dates are required for range mode", 400
+
+        filtered_meetings = [
+            m for m in meetings
+            if start_date <= m["date"] <= end_date
+        ]
+        filtered_meetings.sort(key=lambda x: x["date"])
+    else:
+        # Default: Latest 3 meetings
+        filtered_meetings = sorted(meetings, key=lambda x: x["date"], reverse=True)[:3]
+        filtered_meetings.sort(key=lambda x: x["date"])
+
+    # Group by day
+    schedule = {}
+    for m in filtered_meetings:
+        day = m['date']
+        if day not in schedule:
+            schedule[day] = []
+        schedule[day].append(m)
+
+    days = sorted(schedule.keys())
     return render_template("print.html", schedule=schedule, days=days)
+
+
+@app.route('/print-options', methods=['GET', 'POST'])
+@login_required
+def print_options():
+    if request.method == 'POST':
+        start = request.form['start']
+        end = request.form['end']
+        return redirect(url_for('print_custom', start=start, end=end))
+    return render_template('print_options.html')
+
+
+@app.route('/print/<start>/<end>')
+@login_required
+def print_custom(start, end):
+    try:
+        start_date = datetime.strptime(start, '%Y-%m-%d').date()
+        end_date = datetime.strptime(end, '%Y-%m-%d').date()
+    except ValueError:
+        return "Invalid date format"
+
+    meetings = load_meetings()
+    filtered = [m for m in meetings if start <= m['date'] <= end]
+
+    schedule = {}
+    for m in filtered:
+        day = m['date']
+        if day not in schedule:
+            schedule[day] = []
+        schedule[day].append(m)
+
+    days = sorted(schedule.keys())[:3]
+    return render_template('print.html', schedule=schedule, days=days)
+
 
 @app.route('/view')
 @login_required
