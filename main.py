@@ -35,6 +35,23 @@ def save_meetings(meetings):
         json.dump(data, f, indent=4)
     push_to_github()
 
+def increment_hits():
+    data = {}
+    if os.path.exists(DATA_FILE):
+        with open(DATA_FILE, 'r') as f:
+            data = json.load(f)
+    data["hits"] = data.get("hits", 0) + 1
+    with open(DATA_FILE, 'w') as f:
+        json.dump(data, f, indent=4)
+    push_to_github()
+
+def get_hit_count():
+    if os.path.exists(DATA_FILE):
+        with open(DATA_FILE, 'r') as f:
+            data = json.load(f)
+        return data.get("hits", 0)
+    return 0
+
 # --------- GitHub Backup ---------
 def push_to_github():
     with open(DATA_FILE, 'rb') as file:
@@ -100,8 +117,11 @@ def logout():
 @app.route('/')
 @login_required
 def index():
+    increment_hits()  # ⬅️ count the visit
     meetings = load_meetings()
-    return render_template('index.html', meetings=meetings)
+    hits = get_hit_count()  # ⬅️ get current count
+    return render_template('index.html', meetings=meetings, hits=hits)
+
 
 @app.route('/add', methods=['POST'])
 @login_required
