@@ -5,5 +5,14 @@
             "password": "12345678"
         }
     ],
-    "meetings": []
+    "meetings": [
+        {
+            "id": 0,
+            "title": "schedule",
+            "date": "2025-08-07",
+            "time": "10:05",
+            "brief": "dsfsdf",
+            "minutes": "sdfasd"
+        }
+    ]
 }
