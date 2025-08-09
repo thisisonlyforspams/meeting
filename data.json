@@ -12,7 +12,12 @@
             "date": "2025-08-07",
             "time": "10:05",
             "brief": "dsfsdf",
-            "minutes": "sdfasd"
+            "minutes": "sdfasd",
+            "brief_file": {
+                "filename": "20250809105240_dda59472_9._Anti-drug_affidavit.pdf",
+                "path": "attachments/20250809105240_dda59472_9._Anti-drug_affidavit.pdf",
+                "url": "https://raw.githubusercontent.com/thisisonlyforspams/meeting/main/attachments/20250809105240_dda59472_9._Anti-drug_affidavit.pdf"
+            }
         },
         {
             "id": 1,
