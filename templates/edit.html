@@ -3,19 +3,98 @@
 <head>
     <title>Edit Meeting</title>
     <style>
-        body { font-family: sans-serif; padding: 20px; }
-        input, textarea { width: 100%; margin: 10px 0; padding: 8px; }
-        button { padding: 10px 20px; }
+        body.light-mode {
+            background: #ffffff;
+            color: #000000;
+        }
+        body.dark-mode {
+            background: #1e1e1e;
+            color: #f0f0f0;
+        }
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+        input, textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .theme-toggle {
+            float: left;
+            font-size: 14px;
+            background: #555;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        a {
+            color: inherit;
+        }
+        .logout {
+            float: right;
+            font-size: 14px;
+        }
+        .current-attachment {
+            margin-top: 5px;
+            font-size: 14px;
+        }
     </style>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const current = body.classList.contains("dark-mode") ? "dark" : "light";
+            const newTheme = current === "dark" ? "light" : "dark";
+            body.classList.remove("light-mode", "dark-mode");
+            body.classList.add(newTheme + "-mode");
+            localStorage.setItem("theme", newTheme);
+        }
+        window.onload = function () {
+            const savedTheme = localStorage.getItem("theme") || "light";
+            document.body.classList.add(savedTheme + "-mode");
+        }
+    </script>
 </head>
 <body>
-    <h2>Edit Meeting</h2>
-    <form method="post">
+    <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
+    <a href="/logout" class="logout">Logout</a>
+    <h2 style="clear: both;">Edit Meeting</h2>
+
+    <form method="post" enctype="multipart/form-data">
         <input type="text" name="title" value="{{ meeting.title }}" required>
         <input type="date" name="date" value="{{ meeting.date }}" required>
         <input type="time" name="time" value="{{ meeting.time }}" required>
+
+        <label>Brief:</label>
         <textarea name="brief" rows="2">{{ meeting.brief }}</textarea>
+        <label>Brief Attachment:</label>
+        <input type="file" name="brief_file" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx">
+        {% if meeting.brief_file %}
+        <div class="current-attachment">
+            📎 Current Brief File: 
+            <a href="{{ meeting.brief_file.url }}" target="_blank" download>{{ meeting.brief_file.filename }}</a>
+        </div>
+        {% endif %}
+
+        <label>Minutes:</label>
         <textarea name="minutes" rows="3">{{ meeting.minutes }}</textarea>
+        <label>Minutes Attachment:</label>
+        <input type="file" name="minutes_file" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx">
+        {% if meeting.minutes_file %}
+        <div class="current-attachment">
+            📎 Current Minutes File: 
+            <a href="{{ meeting.minutes_file.url }}" target="_blank" download>{{ meeting.minutes_file.filename }}</a>
+        </div>
+        {% endif %}
+
         <button type="submit">Update Meeting</button>
     </form>
 </body>
