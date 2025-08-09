@@ -99,7 +99,10 @@
             color: inherit;
         }
 
-
+        .file-label {
+            font-size: 12px;
+            color: #666;
+        }
     </style>
     <script>
         function toggleTheme() {
@@ -131,12 +134,18 @@
     </p>
 
     <div class="form-section">
-        <form method="post" action="/add">
+        <form method="post" action="/add" enctype="multipart/form-data">
             <input type="text" name="title" placeholder="Meeting Title" required>
             <input type="date" name="date" required>
             <input type="time" name="time" required>
             <textarea name="brief" placeholder="Meeting Brief" rows="2"></textarea>
+            <label class="file-label">Attach Brief File (PDF, Word, Excel, PPT):</label>
+            <input type="file" name="brief_file" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx">
+
             <textarea name="minutes" placeholder="Meeting Minutes" rows="3"></textarea>
+            <label class="file-label">Attach Minutes File (PDF, Word, Excel, PPT):</label>
+            <input type="file" name="minutes_file" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx">
+
             <button type="submit">Add Meeting</button>
         </form>
     </div>
@@ -155,8 +164,18 @@
             <td>{{ m.title }}</td>
             <td>{{ m.date }}</td>
             <td>{{ m.time }}</td>
-            <td>{{ m.brief }}</td>
-            <td>{{ m.minutes }}</td>
+            <td>
+                {{ m.brief }}
+                {% if m.brief_file %}
+                    <br><a href="{{ m.brief_file.url }}" target="_blank" download>📎 Download Brief</a>
+                {% endif %}
+            </td>
+            <td>
+                {{ m.minutes }}
+                {% if m.minutes_file %}
+                    <br><a href="{{ m.minutes_file.url }}" target="_blank" download>📎 Download Minutes</a>
+                {% endif %}
+            </td>
             <td>
                 <a href="/edit/{{ m.id }}">Edit</a> |
                 <a href="/delete/{{ m.id }}" onclick="return confirm('Delete this meeting?')">Delete</a>
@@ -169,7 +188,5 @@
         <div style="margin-bottom: 5px;"> {{ hits }}</div>
         © 2025 Meeting Manager | Tariq
     </footer>
-
-
 </body>
 </html>
