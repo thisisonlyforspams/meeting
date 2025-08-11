@@ -26,6 +26,15 @@ except Exception:
     GITHUB_OWNER = None
     GITHUB_REPONAME = None
 
+@app.route("/check-token")
+def check_token():
+    import os
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        return "✅ Token loaded (length: {})".format(len(token))
+    else:
+        return "❌ Token missing"
+
 
 # --------- File Storage (data.json) ---------
 def load_meetings():
