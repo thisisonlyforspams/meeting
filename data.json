@@ -35,37 +35,7 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
-        },
-        {
-            "id": 3,
-            "title": "Visitors",
-            "date": "2025-08-11",
-            "time": "15:00",
-            "brief": "Mr.Gajadhar Thakur (Bhojpuri Singer)",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 4,
-            "title": "Visitors",
-            "date": "2025-08-11",
-            "time": "15:00",
-            "brief": "Sh.Vijay Gaur, Chief Programme Organizer & Chairperson, Bhagidari Jan Sahyog Samiti. Reg.inviting tin inaugural session of the final round of inter University Nukkad Natak Competition",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 5,
-            "title": "Visitors",
-            "date": "2025-08-11",
-            "time": "15:00",
-            "brief": "Mr.Yogesh Malik, Regal Building Owners Association",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
         }
     ],
-    "hits": 57
+    "hits": 55
 }
