@@ -25,6 +25,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 2,
+            "title": "Visitors",
+            "date": "2025-08-11",
+            "time": "15:00",
+            "brief": "Mr.Sunny K Singh, DM, New Delhi",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 51
