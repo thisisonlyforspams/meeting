@@ -65,6 +65,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 6,
+            "title": "Visitors",
+            "date": "2025-08-11",
+            "time": "15:00",
+            "brief": "Mr.Yogesh Malik, Regal Building Owners Association",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 44
