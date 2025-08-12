@@ -8,19 +8,6 @@
     "meetings": [
         {
             "id": 0,
-            "title": "schedule",
-            "date": "2025-08-07",
-            "time": "10:05",
-            "brief": "dsfsdf",
-            "minutes": "sdfasd",
-            "brief_file": {
-                "filename": "20250809105240_dda59472_9._Anti-drug_affidavit.pdf",
-                "path": "attachments/20250809105240_dda59472_9._Anti-drug_affidavit.pdf",
-                "url": "https://raw.githubusercontent.com/thisisonlyforspams/meeting/main/attachments/20250809105240_dda59472_9._Anti-drug_affidavit.pdf"
-            }
-        },
-        {
-            "id": 1,
             "title": "sdf",
             "date": "2025-08-07",
             "time": "11:07",
@@ -33,7 +20,7 @@
             }
         },
         {
-            "id": 2,
+            "id": 1,
             "title": "sdfasdf",
             "date": "2025-08-08",
             "time": "09:05",
@@ -46,7 +33,7 @@
             }
         },
         {
-            "id": 3,
+            "id": 2,
             "title": "sdfasdf",
             "date": "2025-08-09",
             "time": "21:05",
