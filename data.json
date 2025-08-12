@@ -85,6 +85,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 8,
+            "title": "Foundation Stone of Clock Tower",
+            "date": "2025-08-11",
+            "time": "18:00",
+            "brief": "Foundation of Stone of Clock Tower at Sheikh Mujibur Rahman Road by Hon'ble LG, Delhi",
+            "minutes": "CE(C-I) to coordinate",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 59
