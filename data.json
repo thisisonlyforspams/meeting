@@ -8,74 +8,24 @@
     "meetings": [
         {
             "id": 0,
-            "title": "Ek Ped Maa Ke Naam",
+            "title": "Visitors",
             "date": "2025-08-11",
-            "time": "09:00",
-            "brief": "Tree Plantation at Sanjay Jheel",
+            "time": "15:00",
+            "brief": "Mr.Baljit Singh Kohli, Palika Bazar Association +03 Associations i.e. Janpath, NDTA & Mohan Singh Place",
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
         },
         {
             "id": 1,
-            "title": "Review of Health, Education & Welfare Department",
-            "date": "2025-08-11",
-            "time": "11:00",
-            "brief": "",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 2,
             "title": "Visitors",
             "date": "2025-08-11",
             "time": "15:00",
-            "brief": "Mr.Sunny K Singh, DM, New Delhi",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 3,
-            "title": "Visitors",
-            "date": "2025-08-11",
-            "time": "15:00",
-            "brief": "Ms.Sofia Dahiya, Chief Controller of Accounts, Min of Housing",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 4,
-            "title": "Visitors",
-            "date": "2025-08-11",
-            "time": "15:00",
-            "brief": "Mr.Gajadhar Thakur (Bhojpuri Singer)",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 5,
-            "title": "Visitors",
-            "date": "2025-08-11",
-            "time": "15:00",
-            "brief": "Sh.Vijay Gaur, Chief Programme Organizer & Chairperson, Bhagidari Jan Sahyog Samiti. Reg.inviting tin inaugural session of the final round of inter University Nukkad Natak Competition",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 6,
-            "title": "Visitors",
-            "date": "2025-08-11",
-            "time": "15:00",
-            "brief": "Mr.Yogesh Malik, Regal Building Owners Association",
+            "brief": "Mr.Baljit Singh Kohli, Palika Bazar Association +03 Associations i.e. Janpath, NDTA & Mohan Singh Place",
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
         }
     ],
-    "hits": 46
+    "hits": 39
 }
