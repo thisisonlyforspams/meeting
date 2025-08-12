@@ -45,6 +45,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 4,
+            "title": "Visitors",
+            "date": "2025-08-11",
+            "time": "15:00",
+            "brief": "Mr.Gajadhar Thakur (Bhojpuri Singer)",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 42
