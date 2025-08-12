@@ -95,6 +95,16 @@
             "minutes": "CE(C-I) to coordinate",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 9,
+            "title": "SOM",
+            "date": "2025-08-12",
+            "time": "11:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 61
