@@ -15,7 +15,17 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 1,
+            "title": "Review of Health, Education & Welfare Department",
+            "date": "2025-08-11",
+            "time": "11:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
-    "hits": 53
+    "hits": 49
 }
