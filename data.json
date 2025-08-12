@@ -8,19 +8,6 @@
     "meetings": [
         {
             "id": 0,
-            "title": "sdf",
-            "date": "2025-08-07",
-            "time": "11:07",
-            "brief": "sasdf",
-            "minutes": "xcvz",
-            "brief_file": {
-                "filename": "20250811160908_1e387304_11._Medical_Fitness_Certificate.pdf",
-                "path": "attachments/20250811160908_1e387304_11._Medical_Fitness_Certificate.pdf",
-                "url": "https://raw.githubusercontent.com/thisisonlyforspams/meeting/main/attachments/20250811160908_1e387304_11._Medical_Fitness_Certificate.pdf"
-            }
-        },
-        {
-            "id": 1,
             "title": "sdfasdf",
             "date": "2025-08-08",
             "time": "09:05",
@@ -33,7 +20,7 @@
             }
         },
         {
-            "id": 2,
+            "id": 1,
             "title": "sdfasdf",
             "date": "2025-08-09",
             "time": "21:05",
