@@ -101,21 +101,21 @@
             "title": "SOM",
             "date": "2025-08-12",
             "time": "11:00",
-            "brief": "Cancelled",
-            "minutes": "Cancelled",
+            "brief": "",
+            "minutes": "",
             "brief_file": null,
             "minutes_file": null
         },
         {
             "id": 10,
-            "title": "PMO Meeting",
+            "title": "Annual Day",
             "date": "2025-08-13",
-            "time": "11:00",
-            "brief": "Reg. Transportation plan for movement to & within Central Vista (Room-54, PMO, South Block)",
+            "time": "15:30",
+            "brief": "Navyug School Sarojini Nagar",
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
         }
     ],
-    "hits": 65
+    "hits": 63
 }
