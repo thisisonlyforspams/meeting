@@ -115,6 +115,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 11,
+            "title": "Annual Day",
+            "date": "2025-08-13",
+            "time": "15:30",
+            "brief": "Navyug School Sarojini Nagar",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 66
