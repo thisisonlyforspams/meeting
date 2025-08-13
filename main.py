@@ -14,10 +14,13 @@ app.secret_key = os.getenv("SECRET_KEY") or "devsecret"  # for session handling
 DATA_FILE = 'data.json'
 
 # GitHub Settings
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  # Set this in your Replit secrets
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  # Set this in Render/Railway/Replit secrets
 GITHUB_REPO = "thisisonlyforspams/meeting"  # owner/repo
 GITHUB_FILE_PATH = "data.json"
 GITHUB_BRANCH = "main"
+
+# Optional: set to "0" to disable pulling on every request
+PULL_ON_EVERY_REQUEST = os.getenv("PULL_ON_EVERY_REQUEST", "1") != "0"
 
 # Helper to split owner/repo
 try:
@@ -27,40 +30,38 @@ except Exception:
     GITHUB_REPONAME = None
 
 
-
-# --------- File Storage (data.json) ---------
-def load_meetings():
-    if os.path.exists(DATA_FILE):
-        with open(DATA_FILE, 'r') as f:
-            data = json.load(f)
-        return data.get('meetings', [])
-    return []
-
-
-def save_meetings(meetings):
-    # preserve other keys (e.g. users, hits) in DATA_FILE
-    data = {}
-    if os.path.exists(DATA_FILE):
-        with open(DATA_FILE, 'r') as f:
-            try:
-                data = json.load(f)
-            except Exception:
-                data = {}
-    data['meetings'] = meetings
-    with open(DATA_FILE, 'w') as f:
-        json.dump(data, f, indent=4)
-    # push updated data.json to GitHub
-    push_datajson_to_github()
-
-
-# --------- GitHub file operations ---------
+# --------- GitHub pull/push helpers ---------
 def github_api_headers():
     if not GITHUB_TOKEN:
-        return {}
+        return {"Accept": "application/vnd.github+json"}
     return {
         "Authorization": f"Bearer {GITHUB_TOKEN}",
         "Accept": "application/vnd.github+json"
     }
+
+
+def pull_datajson_from_github():
+    """
+    Pull the latest data.json from GitHub and save locally.
+    Uses raw.githubusercontent.com so it works for public repos without a token.
+    """
+    try:
+        raw_url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/{GITHUB_BRANCH}/{GITHUB_FILE_PATH}"
+        resp = requests.get(raw_url, timeout=10)
+        if resp.status_code == 200 and resp.text.strip():
+            try:
+                # validate JSON before overwriting
+                parsed = json.loads(resp.text)
+            except Exception as e:
+                print("⚠️ Remote data.json is not valid JSON, skipping pull:", e)
+                return
+            with open(DATA_FILE, "w") as f:
+                json.dump(parsed, f, indent=4)
+            print("✅ Pulled latest data.json from GitHub")
+        else:
+            print(f"⚠️ Could not pull data.json: HTTP {resp.status_code}")
+    except Exception as e:
+        print("❌ Error pulling data.json from GitHub:", e)
 
 
 def push_datajson_to_github():
@@ -71,6 +72,10 @@ def push_datajson_to_github():
         print("⚠️ GITHUB_TOKEN or repo not configured — skipping push of data.json")
         return
 
+    if not os.path.exists(DATA_FILE):
+        print("⚠️ No local data.json to push")
+        return
+
     with open(DATA_FILE, 'rb') as file:
         content = file.read()
     encoded_content = base64.b64encode(content).decode()
@@ -79,8 +84,12 @@ def push_datajson_to_github():
     headers = github_api_headers()
 
     # Get current sha if exists
-    response = requests.get(api_url, headers=headers)
-    sha = response.json().get("sha") if response.status_code == 200 else None
+    try:
+        response = requests.get(api_url, headers=headers, timeout=10)
+        sha = response.json().get("sha") if response.status_code == 200 else None
+    except Exception as e:
+        print("❌ GitHub GET failed for data.json:", e)
+        return
 
     data = {
         "message": f"Auto backup data.json: {datetime.utcnow().isoformat()}",
@@ -90,11 +99,14 @@ def push_datajson_to_github():
     if sha:
         data["sha"] = sha
 
-    resp = requests.put(api_url, headers=headers, json=data)
-    if resp.status_code not in (200, 201):
-        print("❌ GitHub push failed for data.json:", resp.status_code, resp.text)
-    else:
-        print("✅ data.json pushed to GitHub")
+    try:
+        resp = requests.put(api_url, headers=headers, json=data, timeout=10)
+        if resp.status_code not in (200, 201):
+            print("❌ GitHub push failed for data.json:", resp.status_code, resp.text)
+        else:
+            print("✅ data.json pushed to GitHub")
+    except Exception as e:
+        print("❌ GitHub push exception:", e)
 
 
 def push_file_to_github(file_bytes: bytes, dest_path: str, commit_message: str) -> str:
@@ -108,8 +120,11 @@ def push_file_to_github(file_bytes: bytes, dest_path: str, commit_message: str) 
     api_url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{dest_path}"
     headers = github_api_headers()
     # check existing file to get sha
-    resp = requests.get(api_url, headers=headers)
-    sha = resp.json().get("sha") if resp.status_code == 200 else None
+    try:
+        resp = requests.get(api_url, headers=headers, timeout=10)
+        sha = resp.json().get("sha") if resp.status_code == 200 else None
+    except Exception as e:
+        raise RuntimeError(f"GitHub preflight GET failed: {e}")
 
     content_b64 = base64.b64encode(file_bytes).decode()
 
@@ -121,7 +136,7 @@ def push_file_to_github(file_bytes: bytes, dest_path: str, commit_message: str) 
     if sha:
         put_payload["sha"] = sha
 
-    put_resp = requests.put(api_url, headers=headers, json=put_payload)
+    put_resp = requests.put(api_url, headers=headers, json=put_payload, timeout=20)
     if put_resp.status_code not in (200, 201):
         raise RuntimeError(f"GitHub upload failed: {put_resp.status_code} {put_resp.text}")
 
@@ -133,7 +148,7 @@ def push_file_to_github(file_bytes: bytes, dest_path: str, commit_message: str) 
 def handle_uploaded_file(fstorage, folder="attachments"):
     """
     Accepts Werkzeug file storage, returns metadata dict:
-      { "filename": <dest_filename>, "url": <raw_url> }
+      { "filename": <dest_filename>, "path": <path in repo>, "url": <raw_url> }
     """
     if not fstorage:
         return None
@@ -158,8 +173,45 @@ def handle_uploaded_file(fstorage, folder="attachments"):
     return {"filename": unique, "path": dest_path, "url": raw_url}
 
 
+# --------- File Storage (data.json) ---------
+def load_meetings():
+    # Always pull latest before reading (keeps Render/Railway/Replit in sync)
+    if PULL_ON_EVERY_REQUEST:
+        pull_datajson_from_github()
+
+    if os.path.exists(DATA_FILE):
+        try:
+            with open(DATA_FILE, 'r') as f:
+                data = json.load(f)
+            return data.get('meetings', [])
+        except Exception as e:
+            print("⚠️ Failed to read local data.json:", e)
+            return []
+    return []
+
+
+def save_meetings(meetings):
+    # preserve other keys (e.g. users, hits) in DATA_FILE
+    data = {}
+    if os.path.exists(DATA_FILE):
+        with open(DATA_FILE, 'r') as f:
+            try:
+                data = json.load(f)
+            except Exception:
+                data = {}
+    data['meetings'] = meetings
+    with open(DATA_FILE, 'w') as f:
+        json.dump(data, f, indent=4)
+    # push updated data.json to GitHub
+    push_datajson_to_github()
+
+
 # --------- Simple hits counter (keeps in data.json) ---------
 def increment_hits():
+    # pull first to avoid clobbering a newer file
+    if PULL_ON_EVERY_REQUEST:
+        pull_datajson_from_github()
+
     data = {}
     if os.path.exists(DATA_FILE):
         with open(DATA_FILE, 'r') as f:
@@ -200,6 +252,10 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
+
+        if PULL_ON_EVERY_REQUEST:
+            pull_datajson_from_github()
+
         data = {}
         if os.path.exists(DATA_FILE):
             with open(DATA_FILE, 'r') as f:
@@ -399,5 +455,9 @@ def download_pdf():
                      mimetype='application/pdf')
 
 
+# --------- App startup: ensure local file is up-to-date ---------
+pull_datajson_from_github()
+
 if __name__ == '__main__':
+    # Local dev only; on Render/Railway you'll use gunicorn
     app.run(host='0.0.0.0', port=81)
