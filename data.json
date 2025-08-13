@@ -125,16 +125,6 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
-        },
-        {
-            "id": 12,
-            "title": "CS Visit",
-            "date": "2025-08-14",
-            "time": "12:30",
-            "brief": "Visit to Red Fort",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
         }
     ],
     "hits": 75
