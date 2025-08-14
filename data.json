@@ -145,6 +145,16 @@
             "minutes": "Reg Telephone Exchange at Connaught Place",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 14,
+            "title": "Visitors",
+            "date": "2025-08-14",
+            "time": "15:00",
+            "brief": "Dr.Bhuvesh Pratap Singh, IAS, Dy.Secy, DPIIT",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 103
