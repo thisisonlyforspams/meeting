@@ -125,6 +125,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 12,
+            "title": "l;kj",
+            "date": "2025-08-14",
+            "time": "12:30",
+            "brief": "gh",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 86
