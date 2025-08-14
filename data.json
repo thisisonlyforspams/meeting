@@ -185,6 +185,16 @@
             "minutes": "Secy to attend",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 18,
+            "title": "Independance Day",
+            "date": "2025-08-15",
+            "time": "09:00",
+            "brief": "Flag Hoisting by Hon'ble Chairman at Palika Kendra",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 109
