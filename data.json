@@ -125,20 +125,6 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
-        },
-        {
-            "id": 12,
-            "title": "kjl",
-            "date": "2025-08-14",
-            "time": "12:30",
-            "brief": "lkuj",
-            "minutes": "",
-            "brief_file": {
-                "filename": "20250814104514_8a4ed785_PG_Jitender.pdf",
-                "path": "attachments/20250814104514_8a4ed785_PG_Jitender.pdf",
-                "url": "https://raw.githubusercontent.com/thisisonlyforspams/meeting/main/attachments/20250814104514_8a4ed785_PG_Jitender.pdf"
-            },
-            "minutes_file": null
         }
     ],
     "hits": 99
