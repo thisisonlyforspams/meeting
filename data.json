@@ -195,6 +195,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 19,
+            "title": "DTTDC",
+            "date": "2025-08-18",
+            "time": "11:00",
+            "brief": "228th Board Meeting at Delhi Secretariat",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 110
