@@ -175,6 +175,16 @@
             "minutes": "reg.License deed agreement in r/o Shivaji Stadium Annexe, 3rd & 4th floor",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 17,
+            "title": "CS Mtg",
+            "date": "2025-08-14",
+            "time": "15:00",
+            "brief": "To review the status of ongoing 'SWACHHTA DRIVE\"'",
+            "minutes": "Secy to attend",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 107
