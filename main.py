@@ -42,26 +42,28 @@ def github_api_headers():
 
 def pull_datajson_from_github():
     """
-    Pull the latest data.json from GitHub and save locally.
-    Uses raw.githubusercontent.com so it works for public repos without a token.
+    Pull the latest data.json from GitHub API to avoid caching issues and save locally.
     """
     try:
-        raw_url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/{GITHUB_BRANCH}/{GITHUB_FILE_PATH}"
-        resp = requests.get(raw_url, timeout=10)
-        if resp.status_code == 200 and resp.text.strip():
-            try:
-                # validate JSON before overwriting
-                parsed = json.loads(resp.text)
-            except Exception as e:
-                print("⚠️ Remote data.json is not valid JSON, skipping pull:", e)
-                return
-            with open(DATA_FILE, "w") as f:
-                json.dump(parsed, f, indent=4)
-            print("✅ Pulled latest data.json from GitHub")
+        api_url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{GITHUB_FILE_PATH}?ref={GITHUB_BRANCH}"
+        headers = github_api_headers()
+        resp = requests.get(api_url, headers=headers, timeout=10)
+        if resp.status_code == 200:
+            content_b64 = resp.json().get("content", "")
+            if content_b64:
+                content = base64.b64decode(content_b64).decode('utf-8')
+                try:
+                    parsed = json.loads(content)
+                except Exception as e:
+                    print("⚠️ Pulled data.json is not valid JSON, skipping pull:", e)
+                    return
+                with open(DATA_FILE, "w") as f:
+                    json.dump(parsed, f, indent=4)
+                print("✅ Pulled latest data.json from GitHub API")
         else:
             print(f"⚠️ Could not pull data.json: HTTP {resp.status_code}")
     except Exception as e:
-        print("❌ Error pulling data.json from GitHub:", e)
+        print("❌ Error pulling data.json from GitHub API:", e)
 
 
 def push_datajson_to_github():
@@ -294,6 +296,7 @@ def index():
 @login_required
 def add():
     meetings = load_meetings()
+    print(f"Before add: {len(meetings)} meetings")  # Debug
 
     # text fields
     new_meeting = {
@@ -322,6 +325,7 @@ def add():
             new_meeting['minutes_file'] = meta
 
     meetings.append(new_meeting)
+    print(f"After add: {len(meetings)} meetings")  # Debug
     save_meetings(meetings)
     return redirect('/')
 
