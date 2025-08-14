@@ -135,6 +135,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 13,
+            "title": "Visitors",
+            "date": "2025-08-14",
+            "time": "15:00",
+            "brief": "Sh.Ashar Ahmad, Dy Commissioner Income Tax",
+            "minutes": "Reg Telephone Exchange at Connaught Place",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 102
