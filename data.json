@@ -205,6 +205,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 20,
+            "title": "Meeting",
+            "date": "2025-08-18",
+            "time": "15:00",
+            "brief": "Mr.Sen Gupta, Architect",
+            "minutes": "Col.Vishal Kaushik, SE(BM) to corrdinate",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 111
