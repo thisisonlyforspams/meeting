@@ -135,6 +135,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 13,
+            "title": "tret",
+            "date": "2025-08-14",
+            "time": "12:30",
+            "brief": "ghjfg",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 92
