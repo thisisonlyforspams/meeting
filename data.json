@@ -165,6 +165,16 @@
             "minutes": "reg. Parking Management System",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 16,
+            "title": "Visitors",
+            "date": "2025-08-14",
+            "time": "15:00",
+            "brief": "Mrs.Supriya Devasthali, ICAS, Jt.Secretary, PFMS, Min of Finance",
+            "minutes": "reg.License deed agreement in r/o Shivaji Stadium Annexe, 3rd & 4th floor",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 106
