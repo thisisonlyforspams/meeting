@@ -125,7 +125,17 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 12,
+            "title": "CS",
+            "date": "2025-08-14",
+            "time": "12:30",
+            "brief": "Red",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
-    "hits": 81
+    "hits": 80
 }
