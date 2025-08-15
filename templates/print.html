@@ -43,12 +43,12 @@
     <div class="noprint">
         <button onclick="window.print()">🖨️ Print Page</button>
         <a href="/">🔙 Back</a>
-        <a href="/print-options" style="margin-left: 10px;">🗓️ Choose Dates to Print</a>
+        <a href="/choose_dates_to_print" style="margin-left: 10px;">🗓️ Choose Dates to Print</a>
     </div>
 
     {% if days|length > 0 %}
         <div class="day-top">
-            <h2>{{ days[0] }}</h2>
+            <h2>{{ formatted_days[days[0]] }}</h2>
             {% for m in schedule[days[0]] %}
                 <div class="meeting">
                     <strong>{{ m.title }}</strong><br>
@@ -61,7 +61,7 @@
     <div>
         {% if days|length > 1 %}
         <div class="day-column">
-            <h2>{{ days[1] }}</h2>
+            <h2>{{ formatted_days[days[1]] }}</h2>
             {% for m in schedule[days[1]] %}
                 <div class="meeting">
                     <strong>{{ m.title }}</strong><br>
@@ -73,7 +73,7 @@
 
         {% if days|length > 2 %}
         <div class="day-column">
-            <h2>{{ days[2] }}</h2>
+            <h2>{{ formatted_days[days[2]] }}</h2>
             {% for m in schedule[days[2]] %}
                 <div class="meeting">
                     <strong>{{ m.title }}</strong><br>
