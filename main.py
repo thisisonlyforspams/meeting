@@ -286,10 +286,16 @@ def logout():
 @app.route('/')
 @login_required
 def index():
-    increment_hits()
-    meetings = load_meetings()
-    hits = get_hit_count()
-    return render_template('index.html', meetings=meetings, hits=hits)
+        increment_hits()
+        order = request.args.get("order", "desc")  # default: newest first
+
+        meetings = load_meetings()
+        meetings = [m for m in meetings if m.get("date")]
+        meetings.sort(key=lambda m: m.get('date', ''), reverse=(order == "desc"))
+
+        hits = get_hit_count()
+        return render_template('index.html', meetings=meetings, hits=hits, order=order)
+
 
 
 @app.route('/add', methods=['POST'])
@@ -389,24 +395,85 @@ def view_meetings():
         ]
     return render_template('view.html', meetings=meetings, query=query)
 
+from datetime import datetime, timedelta
 
 @app.route('/print')
 @login_required
 def print_schedule():
     meetings = load_meetings()
-    # default: latest 3 unique days
-    sorted_meetings = sorted(meetings, key=lambda m: m.get('date', ''))
-    days = []
-    for m in sorted_meetings:
-        if m.get('date') not in days:
-            days.append(m.get('date'))
-        if len(days) == 3:
-            break
+
+    # get today and next 2 days
+    today = datetime.now().date()
+    days_dt = [today + timedelta(days=i) for i in range(3)]
+    days = [d.strftime("%Y-%m-%d") for d in days_dt]
+
+    # build schedule dict (only include meetings on these dates)
     schedule = {d: [] for d in days}
-    for m in sorted_meetings:
+    for m in meetings:
         if m.get('date') in schedule:
-            schedule[m.get('date')].append(m)
-    return render_template("print.html", schedule=schedule, days=days)
+            schedule[m['date']].append(m)
+
+    # format dates for display
+    formatted_days = {d: datetime.strptime(d, "%Y-%m-%d").strftime("%A, %d/%m/%Y") for d in days}
+
+    return render_template("print.html", schedule=schedule, days=days, formatted_days=formatted_days)
+
+
+
+
+
+from datetime import datetime
+
+@app.route('/choose_dates_to_print', methods=['GET', 'POST'])
+@login_required
+def choose_dates_to_print():
+        if request.method == 'POST':
+            start_date = request.form.get('start', '').strip()
+            end_date = request.form.get('end', '').strip()
+
+            try:
+                meetings = load_meetings()
+
+                # sort by date (skip meetings without a date)
+                sorted_meetings = sorted(
+                    [m for m in meetings if m.get('date')],
+                    key=lambda m: m['date']
+                )
+
+                # filter by date range
+                filtered = [
+                    m for m in sorted_meetings
+                    if start_date <= m['date'] <= end_date
+                ]
+
+                # collect unique days
+                days = []
+                for m in filtered:
+                    if m['date'] not in days:
+                        days.append(m['date'])
+
+                # build schedule dict
+                schedule = {d: [] for d in days}
+                for m in filtered:
+                    schedule[m['date']].append(m)
+
+                # generate formatted days for display
+                formatted_days = {}
+                for d in days:
+                    dt = datetime.strptime(d, '%Y-%m-%d')
+                    formatted_days[d] = dt.strftime('%A, %d/%m/%Y')
+
+                return render_template("print.html", schedule=schedule, days=days, formatted_days=formatted_days)
+
+            except Exception as e:
+                import traceback
+                print("Error in choose_dates_to_print:", e)
+                traceback.print_exc()
+                return f"<h3>Error: {e}</h3>", 500
+
+        # GET request → show date selection form
+        return render_template("print_options.html")
+
 
 
 @app.route('/download/excel')
