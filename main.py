@@ -13,6 +13,17 @@ app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY") or "devsecret"  # for session handling
 DATA_FILE = 'data.json'
 
+
+@app.template_filter('datetimeformat')
+def datetimeformat(value):
+    """Format date from yyyy-mm-dd to dd/mm/yyyy"""
+    try:
+        dt = datetime.strptime(value, "%Y-%m-%d")
+        return dt.strftime("%d/%m/%Y")
+    except:
+        return value
+
+
 # GitHub Settings
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  # Set this in Render/Railway/Replit secrets
 GITHUB_REPO = "thisisonlyforspams/meeting"  # owner/repo
