@@ -18,16 +18,42 @@
         button {
             padding: 8px 16px;
         }
+        .date-preview {
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
     </style>
+    <script>
+        function formatDate(inputId, outputId) {
+            const input = document.getElementById(inputId);
+            const output = document.getElementById(outputId);
+            input.addEventListener('change', function() {
+                if (!input.value) {
+                    output.textContent = '';
+                    return;
+                }
+                const d = new Date(input.value);
+                const options = { weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric' };
+                output.textContent = d.toLocaleDateString('en-GB', options); // dd/mm/yyyy + day
+            });
+        }
+        window.onload = function() {
+            formatDate('start', 'startPreview');
+            formatDate('end', 'endPreview');
+        }
+    </script>
 </head>
 <body>
     <h2>Choose a Date Range to Print</h2>
     <form method="POST">
         <label for="start">Start Date:</label>
-        <input type="date" name="start" required>
+        <input type="date" name="start" id="start" required>
+        <div id="startPreview" class="date-preview"></div>
 
         <label for="end">End Date:</label>
-        <input type="date" name="end" required>
+        <input type="date" name="end" id="end" required>
+        <div id="endPreview" class="date-preview"></div>
 
         <button type="submit">📄 Show Schedule</button>
         <a href="/">🔙 Back</a>
