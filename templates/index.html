@@ -158,6 +158,14 @@
         </form>
     </div>
 
+    <div style="margin-top: 20px; margin-bottom: 10px;">
+        <a href="/?order={{ 'asc' if order == 'desc' else 'desc' }}" 
+           style="padding: 6px 12px; background: #28A745; color: white; text-decoration: none; border-radius: 4px; margin-left: 10px;">
+            🔃 Sort: {{ 'Oldest First' if order == 'desc' else 'Newest First' }}
+        </a>
+    </div>
+
+    
     <table>
         <tr>
             <th>Title</th>
