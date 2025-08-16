@@ -19,7 +19,7 @@ def datetimeformat(value):
     """Format date from yyyy-mm-dd to dd/mm/yyyy"""
     try:
         dt = datetime.strptime(value, "%Y-%m-%d")
-        return dt.strftime("%a  %d/%m/%Y")
+        return dt.strftime("%A  %d/%m/%Y")
     except:
         return value
 
