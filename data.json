@@ -235,6 +235,16 @@
             "minutes": "Secy, NDMC to attend",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 23,
+            "title": "High Tea",
+            "date": "2025-12-08",
+            "time": "17:00",
+            "brief": "At PSOI Club",
+            "minutes": "With Students",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 229
