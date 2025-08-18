@@ -245,6 +245,16 @@
             "minutes": "With Students",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 24,
+            "title": "Invitation",
+            "date": "2025-12-08",
+            "time": "10:00",
+            "brief": "Munshi Prem Chand ke janam shatabdi mah me 19/08/2025 22 bhartiye bhashayo me 22 kahaniya ke natay rupantaran",
+            "minutes": "Dr.Ambedkar Kendra",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 256
