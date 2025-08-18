@@ -255,6 +255,16 @@
             "minutes": "Dr.Ambedkar Kendra",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 25,
+            "title": "SOM",
+            "date": "2025-08-19",
+            "time": "11:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 265
