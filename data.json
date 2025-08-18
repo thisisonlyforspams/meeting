@@ -305,6 +305,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 30,
+            "title": "Visitors",
+            "date": "2025-08-19",
+            "time": "15:00",
+            "brief": "Mr.Ram Pal Sharma, Fitter \r\nreg. Pay Fixation",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 272
