@@ -325,6 +325,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 32,
+            "title": "Mtg reg. Water Logging at CP",
+            "date": "2025-08-19",
+            "time": "16:00",
+            "brief": "",
+            "minutes": "Er.Rajshekhar, SE to Coordinate",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 274
