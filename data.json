@@ -265,6 +265,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 26,
+            "title": "Visitors",
+            "date": "2025-08-19",
+            "time": "15:00",
+            "brief": "Ms.Rupika Saran, Co-founder, Delhi Chapter, Each One Teach One (NGO)",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 267
