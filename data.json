@@ -215,6 +215,16 @@
             "minutes": "Col. Vishal Kaushik, SE(BM) to coordinate",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 21,
+            "title": "Jan Vishwas",
+            "date": "2025-12-08",
+            "time": "12:00",
+            "brief": "Meeting at MHA",
+            "minutes": "Secy, Mr.Ankit Goyal, DLO & Mr.Manjul Tanwar, ALO to accompany",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 226
