@@ -275,6 +275,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 27,
+            "title": "Visitors",
+            "date": "2025-08-19",
+            "time": "15:00",
+            "brief": "Mr.Anshul Diwan, Diplomatic Enc Welfare Association\r\nreg. Garbage, Traffic etc",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 268
