@@ -385,6 +385,16 @@
             "minutes": "MOH to coordinate",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 38,
+            "title": "CS Mtg. on \"Compliance Reduction & deregulation...",
+            "date": "2025-08-21",
+            "time": "15:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 280
