@@ -285,6 +285,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 28,
+            "title": "Visitors",
+            "date": "2025-08-19",
+            "time": "15:00",
+            "brief": "Mr.Jitender Kumar, NDMC Workers United Front",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 270
