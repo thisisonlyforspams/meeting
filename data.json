@@ -435,6 +435,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 43,
+            "title": "MHA Meeting",
+            "date": "2025-08-20",
+            "time": "18:15",
+            "brief": "Reg Implementation of Flagship Schemes in Union Territories",
+            "minutes": "CR.No.34000B, 4th Floor, Kartavya Bhawan 3",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 293
