@@ -405,6 +405,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 40,
+            "title": "LG - Fortnightly Review of NDMC",
+            "date": "2025-08-22",
+            "time": "11:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 290
