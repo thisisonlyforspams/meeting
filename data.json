@@ -455,6 +455,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 45,
+            "title": "Visitors",
+            "date": "2025-08-20",
+            "time": "15:00",
+            "brief": "Sh.Rajesh Yadav, Ex.Councilor, Vikas Puri",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 303
