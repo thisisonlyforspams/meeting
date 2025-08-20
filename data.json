@@ -475,6 +475,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 47,
+            "title": "Visitors",
+            "date": "2025-08-20",
+            "time": "15:00",
+            "brief": "Sh.Abhineet Puri, Remesean Healthcare reg. Presentation of Medical Equipment",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 305
