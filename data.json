@@ -465,6 +465,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 46,
+            "title": "Visitors",
+            "date": "2025-08-20",
+            "time": "15:00",
+            "brief": "Sh.S.L.Khariya, National President, Nav Nirman Jan Kalyan Sanstha",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 304
