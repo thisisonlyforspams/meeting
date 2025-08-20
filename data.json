@@ -445,6 +445,16 @@
             "minutes": "CR.No.34000B, 4th Floor, Kartavya Bhawan 3",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 44,
+            "title": "Visitors",
+            "date": "2025-08-20",
+            "time": "15:00",
+            "brief": "Sh.R.K.Gupta, Former Chief Engineer, DSIIDC\r\nSh.Rajesh Yadav, Ex.Councilor, Vikas Puri\r\nSh.S.L.Khariya, National President, Nav Nirman Jan Kalyan Sanstha\r\nSh.Abhineet Puri, Remesean Healthcare reg. Presentation of Medical Equipment\r\nSh.Vivek Shukla, CEO, Bharat Hotels +03 reg.GST demand",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 298
