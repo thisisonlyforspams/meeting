@@ -505,6 +505,16 @@
             "minutes": "Secretary /Dir(HL)",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 50,
+            "title": "Visitors",
+            "date": "2025-08-25",
+            "time": "15:00",
+            "brief": "Mr.Rakesh, Daman & Diu Guest House Chanakyapuri, reg Invitation for Ganesh Chaturthi",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 341
