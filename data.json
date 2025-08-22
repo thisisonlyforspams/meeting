@@ -535,6 +535,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 53,
+            "title": "Visitors",
+            "date": "2025-08-25",
+            "time": "15:00",
+            "brief": "Dr.Pooja Patel, Founder, Ergophyx reg. to conduct complimentary ergonomic awareness session for New Delhi Sweepers",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 344
