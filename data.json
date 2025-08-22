@@ -525,6 +525,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 52,
+            "title": "Visitors",
+            "date": "2025-08-25",
+            "time": "15:59",
+            "brief": "Dr.Debolina Kundu, Director National Instt. Of Urban Affairs reg preparation of the Urban Management Plan of Delhi",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 343
