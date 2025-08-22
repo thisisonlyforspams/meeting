@@ -545,6 +545,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 54,
+            "title": "Invitation",
+            "date": "2025-08-23",
+            "time": "19:00",
+            "brief": "Hon'ble CM Delhi, cordially invites for Dinner hosted in the honor of distinguished delegation attending All India Speakers Conference, 2025",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 345
