@@ -515,6 +515,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 51,
+            "title": "Visitors",
+            "date": "2025-08-25",
+            "time": "15:00",
+            "brief": "Mr.Diwakar Singh from IP Gas reg.PNG Gas line laying permission in CP",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 342
