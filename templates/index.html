@@ -130,6 +130,13 @@
             document.body.classList.add(savedTheme + "-mode");
         }
     </script>
+
+    <script>
+  setTimeout(function(){
+    window.location.reload();
+  }, 300000); // 5 minutes
+</script>
+
 </head>
 <body>
     <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
