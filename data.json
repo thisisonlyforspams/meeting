@@ -645,6 +645,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 64,
+            "title": "Mr.Bhaskar from Deloitte",
+            "date": "2025-08-27",
+            "time": "16:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 420
