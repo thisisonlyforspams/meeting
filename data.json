@@ -635,6 +635,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 63,
+            "title": "Visitors",
+            "date": "2025-08-26",
+            "time": "15:30",
+            "brief": "Sh.Anil Valmiki, Hon'ble Member, NDMC",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 418
