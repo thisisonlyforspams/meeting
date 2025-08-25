@@ -568,16 +568,6 @@
         },
         {
             "id": 56,
-            "title": "Meeting with CMD NBCC in Council Room",
-            "date": "2025-08-26",
-            "time": "16:00",
-            "brief": "",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 57,
             "title": "Visitors",
             "date": "2025-08-26",
             "time": "15:00",
@@ -587,7 +577,7 @@
             "minutes_file": null
         },
         {
-            "id": 58,
+            "id": 57,
             "title": "Council Meeting",
             "date": "2025-08-27",
             "time": "11:00",
@@ -597,7 +587,7 @@
             "minutes_file": null
         },
         {
-            "id": 59,
+            "id": 58,
             "title": "Visitors",
             "date": "2025-08-27",
             "time": "15:00",
@@ -607,7 +597,7 @@
             "minutes_file": null
         },
         {
-            "id": 60,
+            "id": 59,
             "title": "Visitors",
             "date": "2025-08-26",
             "time": "15:00",
@@ -617,7 +607,7 @@
             "minutes_file": null
         },
         {
-            "id": 61,
+            "id": 60,
             "title": "Visitors",
             "date": "2025-08-26",
             "time": "15:00",
@@ -627,7 +617,7 @@
             "minutes_file": null
         },
         {
-            "id": 62,
+            "id": 61,
             "title": "Visitors",
             "date": "2025-08-26",
             "time": "15:00",
@@ -637,7 +627,7 @@
             "minutes_file": null
         },
         {
-            "id": 63,
+            "id": 62,
             "title": "Visitors",
             "date": "2025-08-26",
             "time": "15:30",
@@ -647,7 +637,7 @@
             "minutes_file": null
         },
         {
-            "id": 64,
+            "id": 63,
             "title": "Mr.Bhaskar from Deloitte",
             "date": "2025-08-27",
             "time": "16:00",
@@ -657,7 +647,7 @@
             "minutes_file": null
         },
         {
-            "id": 65,
+            "id": 64,
             "title": "Meeting with CMD NBCC in Council Room",
             "date": "2025-08-26",
             "time": "16:10",
