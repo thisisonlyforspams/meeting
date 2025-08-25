@@ -605,6 +605,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 60,
+            "title": "Visitors",
+            "date": "2025-08-26",
+            "time": "15:00",
+            "brief": "Sh.Khusro Ahmad Khan +01 Palika Sahayak",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 415
