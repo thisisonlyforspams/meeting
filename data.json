@@ -715,6 +715,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 71,
+            "title": "Meeting regarding Water Supply Control Room PE & Presentation on Mist",
+            "date": "2025-08-28",
+            "time": "12:30",
+            "brief": "CTA & CEC-2 to coordinate",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 438
