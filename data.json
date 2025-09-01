@@ -775,6 +775,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 77,
+            "title": "Visitors",
+            "date": "2025-09-01",
+            "time": "15:00",
+            "brief": "Mrs.Maneka Gandhi, Former MP",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 520
