@@ -745,6 +745,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 74,
+            "title": "Visitors",
+            "date": "2025-09-01",
+            "time": "15:00",
+            "brief": "Sh Jagminder Jauli, RSS.",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 517
