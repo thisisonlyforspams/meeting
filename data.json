@@ -765,6 +765,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 76,
+            "title": "Visitors",
+            "date": "2025-09-01",
+            "time": "15:00",
+            "brief": "Prof. Nityananda\r\nRef:Sh.K.N.Srivastava",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 519
