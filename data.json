@@ -755,6 +755,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 75,
+            "title": "Visitors",
+            "date": "2025-09-01",
+            "time": "15:00",
+            "brief": "Sh Mrityunjoy Roy, MD, Virtuoso Technologies Pvt. Ltd.",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 518
