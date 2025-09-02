@@ -825,6 +825,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 82,
+            "title": "CS Meeting to discuss modalities of implementation & roll out of Integrated Command & Control Centre (ICCC)",
+            "date": "2025-09-02",
+            "time": "12:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 530
