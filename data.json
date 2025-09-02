@@ -208,21 +208,21 @@
         },
         {
             "id": 20,
-            "title": "Meeting",
-            "date": "2025-08-18",
-            "time": "15:45",
-            "brief": "Mr.Sen Gupta, Architect",
-            "minutes": "Col. Vishal Kaushik, SE(BM) to coordinate",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 21,
             "title": "Jan Vishwas",
             "date": "2025-08-18",
             "time": "12:00",
             "brief": "Meeting at MHA",
             "minutes": "Secy, Mr.Ankit Goyal, DLO & Mr.Manjul Tanwar, ALO to accompany",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
+            "id": 21,
+            "title": "Meeting",
+            "date": "2025-08-18",
+            "time": "15:45",
+            "brief": "Mr.Sen Gupta, Architect",
+            "minutes": "Col. Vishal Kaushik, SE(BM) to coordinate",
             "brief_file": null,
             "minutes_file": null
         },
@@ -358,96 +358,6 @@
         },
         {
             "id": 35,
-            "title": "CS -Presentation of SYSTRA's United Digital Solution for Urban Flood Resilience in Delhi",
-            "date": "2025-08-20",
-            "time": "16:30",
-            "brief": "Secy./CE(C-I)/SE, Sh.S.A.Khan",
-            "minutes": "Postponed.",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 36,
-            "title": "Review of Ongoing Projects",
-            "date": "2025-08-21",
-            "time": "11:00",
-            "brief": "",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 37,
-            "title": "Felicitation Award Ceremony for best performing workers for sanitation",
-            "date": "2025-08-21",
-            "time": "12:30",
-            "brief": "",
-            "minutes": "MOH to coordinate",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 38,
-            "title": "CS Mtg. on \"Compliance Reduction & deregulation...",
-            "date": "2025-08-21",
-            "time": "15:00",
-            "brief": "",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 39,
-            "title": "Review of IT Department",
-            "date": "2025-08-21",
-            "time": "16:00",
-            "brief": "",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 40,
-            "title": "Review of Tax, Commercial, Estate & PMS",
-            "date": "2025-08-22",
-            "time": "11:00",
-            "brief": "",
-            "minutes": "LG - Fortnightly Review of NDMC (Cancelled)",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 41,
-            "title": "Visitors",
-            "date": "2025-08-22",
-            "time": "15:00",
-            "brief": "",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 42,
-            "title": "Review of Health, Education & Welfare",
-            "date": "2025-08-22",
-            "time": "16:00",
-            "brief": "",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 43,
-            "title": "MHA Meeting",
-            "date": "2025-08-20",
-            "time": "18:15",
-            "brief": "Reg Implementation of Flagship Schemes in Union Territories",
-            "minutes": "CR.No.34000B, 4th Floor, Kartavya Bhawan 3",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 44,
             "title": "Visitors",
             "date": "2025-08-20",
             "time": "15:00",
@@ -457,7 +367,7 @@
             "minutes_file": null
         },
         {
-            "id": 45,
+            "id": 36,
             "title": "Visitors",
             "date": "2025-08-20",
             "time": "15:00",
@@ -467,7 +377,7 @@
             "minutes_file": null
         },
         {
-            "id": 46,
+            "id": 37,
             "title": "Visitors",
             "date": "2025-08-20",
             "time": "15:00",
@@ -477,7 +387,7 @@
             "minutes_file": null
         },
         {
-            "id": 47,
+            "id": 38,
             "title": "Visitors",
             "date": "2025-08-20",
             "time": "15:00",
@@ -487,7 +397,7 @@
             "minutes_file": null
         },
         {
-            "id": 48,
+            "id": 39,
             "title": "Visitors",
             "date": "2025-08-20",
             "time": "15:00",
@@ -497,7 +407,107 @@
             "minutes_file": null
         },
         {
+            "id": 40,
+            "title": "CS -Presentation of SYSTRA's United Digital Solution for Urban Flood Resilience in Delhi",
+            "date": "2025-08-20",
+            "time": "16:30",
+            "brief": "Secy./CE(C-I)/SE, Sh.S.A.Khan",
+            "minutes": "Postponed.",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
+            "id": 41,
+            "title": "MHA Meeting",
+            "date": "2025-08-20",
+            "time": "18:15",
+            "brief": "Reg Implementation of Flagship Schemes in Union Territories",
+            "minutes": "CR.No.34000B, 4th Floor, Kartavya Bhawan 3",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
+            "id": 42,
+            "title": "Review of Ongoing Projects",
+            "date": "2025-08-21",
+            "time": "11:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
+            "id": 43,
+            "title": "Felicitation Award Ceremony for best performing workers for sanitation",
+            "date": "2025-08-21",
+            "time": "12:30",
+            "brief": "",
+            "minutes": "MOH to coordinate",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
+            "id": 44,
+            "title": "CS Mtg. on \"Compliance Reduction & deregulation...",
+            "date": "2025-08-21",
+            "time": "15:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
+            "id": 45,
+            "title": "Review of IT Department",
+            "date": "2025-08-21",
+            "time": "16:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
+            "id": 46,
+            "title": "Review of Tax, Commercial, Estate & PMS",
+            "date": "2025-08-22",
+            "time": "11:00",
+            "brief": "",
+            "minutes": "LG - Fortnightly Review of NDMC (Cancelled)",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
+            "id": 47,
+            "title": "Visitors",
+            "date": "2025-08-22",
+            "time": "15:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
+            "id": 48,
+            "title": "Review of Health, Education & Welfare",
+            "date": "2025-08-22",
+            "time": "16:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
             "id": 49,
+            "title": "Invitation",
+            "date": "2025-08-23",
+            "time": "19:00",
+            "brief": "Hon'ble CM Delhi, cordially invites for Dinner hosted in the honor of distinguished delegation attending All India Speakers Conference, 2025",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
+            "id": 50,
             "title": "MHA - Meeting",
             "date": "2025-08-25",
             "time": "11:30",
@@ -507,7 +517,7 @@
             "minutes_file": null
         },
         {
-            "id": 50,
+            "id": 51,
             "title": "Visitors",
             "date": "2025-08-25",
             "time": "15:00",
@@ -517,7 +527,7 @@
             "minutes_file": null
         },
         {
-            "id": 51,
+            "id": 52,
             "title": "Visitors",
             "date": "2025-08-25",
             "time": "15:00",
@@ -527,7 +537,7 @@
             "minutes_file": null
         },
         {
-            "id": 52,
+            "id": 53,
             "title": "Visitors",
             "date": "2025-08-25",
             "time": "15:00",
@@ -537,21 +547,11 @@
             "minutes_file": null
         },
         {
-            "id": 53,
+            "id": 54,
             "title": "Visitors",
             "date": "2025-08-25",
             "time": "15:00",
             "brief": "Dr.Pooja Patel, Founder, Ergophyx reg. to conduct complimentary ergonomic awareness session for New Delhi Sweepers",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 54,
-            "title": "Invitation",
-            "date": "2025-08-23",
-            "time": "19:00",
-            "brief": "Hon'ble CM Delhi, cordially invites for Dinner hosted in the honor of distinguished delegation attending All India Speakers Conference, 2025",
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
@@ -578,26 +578,6 @@
         },
         {
             "id": 57,
-            "title": "Council Meeting",
-            "date": "2025-08-27",
-            "time": "11:00",
-            "brief": "Didn't happen",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 58,
-            "title": "Visitors",
-            "date": "2025-08-27",
-            "time": "15:00",
-            "brief": "",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 59,
             "title": "Visitors",
             "date": "2025-08-26",
             "time": "15:00",
@@ -607,7 +587,7 @@
             "minutes_file": null
         },
         {
-            "id": 60,
+            "id": 58,
             "title": "Visitors",
             "date": "2025-08-26",
             "time": "15:00",
@@ -617,7 +597,7 @@
             "minutes_file": null
         },
         {
-            "id": 61,
+            "id": 59,
             "title": "Visitors",
             "date": "2025-08-26",
             "time": "15:00",
@@ -627,7 +607,7 @@
             "minutes_file": null
         },
         {
-            "id": 62,
+            "id": 60,
             "title": "Visitors",
             "date": "2025-08-26",
             "time": "15:30",
@@ -637,9 +617,9 @@
             "minutes_file": null
         },
         {
-            "id": 63,
-            "title": "Mr.Bhaskar from Deloitte",
-            "date": "2025-08-27",
+            "id": 61,
+            "title": "Meeting with CMD NBCC in Council Room",
+            "date": "2025-08-26",
             "time": "16:00",
             "brief": "",
             "minutes": "",
@@ -647,9 +627,29 @@
             "minutes_file": null
         },
         {
+            "id": 62,
+            "title": "Council Meeting",
+            "date": "2025-08-27",
+            "time": "11:00",
+            "brief": "Didn't happen",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
+            "id": 63,
+            "title": "Visitors",
+            "date": "2025-08-27",
+            "time": "15:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
             "id": 64,
-            "title": "Meeting with CMD NBCC in Council Room",
-            "date": "2025-08-26",
+            "title": "Mr.Bhaskar from Deloitte",
+            "date": "2025-08-27",
             "time": "16:00",
             "brief": "",
             "minutes": "",
@@ -688,16 +688,6 @@
         },
         {
             "id": 68,
-            "title": "Visitors",
-            "date": "2025-08-28",
-            "time": "15:00",
-            "brief": "",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 69,
             "title": "Meeting regarding Water Supply Control Room PE & Presentation on Mist",
             "date": "2025-08-28",
             "time": "12:30",
@@ -707,7 +697,27 @@
             "minutes_file": null
         },
         {
+            "id": 69,
+            "title": "Visitors",
+            "date": "2025-08-28",
+            "time": "15:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
             "id": 70,
+            "title": "Review of IT Department",
+            "date": "2025-08-28",
+            "time": "16:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
+            "id": 71,
             "title": "Mtg with Sh.K.N.Srivastava, IAS, Dir, IIC",
             "date": "2025-08-28",
             "time": "17:00",
@@ -717,21 +727,11 @@
             "minutes_file": null
         },
         {
-            "id": 71,
+            "id": 72,
             "title": "CS- Farewell to Sh.Sanjiv Kumar IAS",
             "date": "2025-08-28",
             "time": "17:30",
             "brief": "Delhi Sectt.",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 72,
-            "title": "Review of IT Department",
-            "date": "2025-08-28",
-            "time": "16:00",
-            "brief": "",
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
@@ -808,16 +808,6 @@
         },
         {
             "id": 80,
-            "title": "Addl. Secy(UT), MHA \u2013 Compliance Reduction & Deregulation in NCT of Delhi \t          [34000 B, CCS-3 Building]",
-            "date": "2025-09-03",
-            "time": "11:00",
-            "brief": "Postponed",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 81,
             "title": "CS Meeting to discuss modalities of implementation & roll out of Integrated Command & Control Centre (ICCC)",
             "date": "2025-09-02",
             "time": "12:00",
@@ -827,7 +817,7 @@
             "minutes_file": null
         },
         {
-            "id": 82,
+            "id": 81,
             "title": "Visitors",
             "date": "2025-09-02",
             "time": "15:00",
@@ -837,7 +827,7 @@
             "minutes_file": null
         },
         {
-            "id": 83,
+            "id": 82,
             "title": "Visitors",
             "date": "2025-09-02",
             "time": "15:00",
@@ -847,7 +837,7 @@
             "minutes_file": null
         },
         {
-            "id": 84,
+            "id": 83,
             "title": "Visitors",
             "date": "2025-09-02",
             "time": "15:00",
@@ -857,7 +847,7 @@
             "minutes_file": null
         },
         {
-            "id": 85,
+            "id": 84,
             "title": "Visitors",
             "date": "2025-09-02",
             "time": "15:00",
@@ -867,7 +857,7 @@
             "minutes_file": null
         },
         {
-            "id": 86,
+            "id": 85,
             "title": "Visitors",
             "date": "2025-09-02",
             "time": "15:00",
@@ -877,7 +867,7 @@
             "minutes_file": null
         },
         {
-            "id": 87,
+            "id": 86,
             "title": "Briefing on Agenda Items to be placed before the Council (HODs Concerned)",
             "date": "2025-09-02",
             "time": "16:00",
@@ -887,17 +877,7 @@
             "minutes_file": null
         },
         {
-            "id": 88,
-            "title": "Council Meeting",
-            "date": "2025-09-03",
-            "time": "11:00",
-            "brief": "",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 89,
+            "id": 87,
             "title": "Visit to San Martin Marg (Meeting point Jesus & Mary Marg)",
             "date": "2025-09-03",
             "time": "08:00",
@@ -907,7 +887,37 @@
             "minutes_file": null
         },
         {
+            "id": 88,
+            "title": "Addl. Secy(UT), MHA \u2013 Compliance Reduction & Deregulation in NCT of Delhi \t          [34000 B, CCS-3 Building]",
+            "date": "2025-09-03",
+            "time": "11:00",
+            "brief": "Postponed",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
+            "id": 89,
+            "title": "Council Meeting",
+            "date": "2025-09-03",
+            "time": "11:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
             "id": 90,
+            "title": "testing",
+            "date": "2025-09-03",
+            "time": "15:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
+            "id": 91,
             "title": "CS Meeting reg. to review the status of Compliance reduction & Deregulation initiative in r/o of NCT Delhi",
             "date": "2025-09-03",
             "time": "17:30",
