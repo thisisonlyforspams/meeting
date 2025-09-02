@@ -875,6 +875,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 87,
+            "title": "Briefing on Agenda Items to be placed before the Council (HODs Concerned)",
+            "date": "2025-09-02",
+            "time": "16:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 537
