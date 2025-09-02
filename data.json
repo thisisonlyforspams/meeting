@@ -825,6 +825,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 82,
+            "title": "Visitors",
+            "date": "2025-09-02",
+            "time": "15:00",
+            "brief": "Presentation on Mobility Ref.Sh.Amitabh Kant",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 532
