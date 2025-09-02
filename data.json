@@ -888,6 +888,16 @@
         },
         {
             "id": 88,
+            "title": "test",
+            "date": "2025-09-03",
+            "time": "10:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
+        },
+        {
+            "id": 89,
             "title": "Addl. Secy(UT), MHA \u2013 Compliance Reduction & Deregulation in NCT of Delhi \t          [34000 B, CCS-3 Building]",
             "date": "2025-09-03",
             "time": "11:00",
@@ -897,7 +907,7 @@
             "minutes_file": null
         },
         {
-            "id": 89,
+            "id": 90,
             "title": "Council Meeting",
             "date": "2025-09-03",
             "time": "11:00",
@@ -907,7 +917,7 @@
             "minutes_file": null
         },
         {
-            "id": 90,
+            "id": 91,
             "title": "testing",
             "date": "2025-09-03",
             "time": "15:00",
@@ -917,7 +927,7 @@
             "minutes_file": null
         },
         {
-            "id": 91,
+            "id": 92,
             "title": "CS Meeting reg. to review the status of Compliance reduction & Deregulation initiative in r/o of NCT Delhi",
             "date": "2025-09-03",
             "time": "17:30",
