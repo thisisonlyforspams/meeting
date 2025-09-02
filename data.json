@@ -895,6 +895,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 89,
+            "title": "Visit to San Martin Marg (Meeting point Jesus & Mary Marg)",
+            "date": "2025-09-03",
+            "time": "08:00",
+            "brief": "Dir(Wel) & Nodal Officer to coordinate",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 564
