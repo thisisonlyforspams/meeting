@@ -995,6 +995,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 99,
+            "title": "CS Meeting reg. to review the status of Compliance reduction & Deregulation initiative in r/o of NCT Delhi",
+            "date": "2025-09-03",
+            "time": "17:30",
+            "brief": "Delhi Sectt",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 654
