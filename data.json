@@ -935,6 +935,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 93,
+            "title": "Council Meeting",
+            "date": "2025-09-03",
+            "time": "12:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 611
