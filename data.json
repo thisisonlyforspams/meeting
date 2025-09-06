@@ -1005,6 +1005,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 100,
+            "title": "Friday Gazetted Holiday",
+            "date": "2025-09-05",
+            "time": "09:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 680
