@@ -1085,6 +1085,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 108,
+            "title": "Standing Committee on Audit in NDMC (SCAN)",
+            "date": "2025-09-10",
+            "time": "15:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 688
