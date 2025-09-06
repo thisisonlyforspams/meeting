@@ -1035,6 +1035,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 103,
+            "title": "Senior Officers Meeting",
+            "date": "2025-09-09",
+            "time": "11:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 683
