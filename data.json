@@ -1115,6 +1115,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 111,
+            "title": "Visitors",
+            "date": "2025-09-08",
+            "time": "15:00",
+            "brief": "Sh.Arvind Kumar, Palika Sahayak reg. Promotion as Game Attendant",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 717
