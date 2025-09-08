@@ -1095,6 +1095,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 109,
+            "title": "Visitors",
+            "date": "2025-09-08",
+            "time": "15:00",
+            "brief": "Sh.Shivnath Jha, Journalist",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 715
