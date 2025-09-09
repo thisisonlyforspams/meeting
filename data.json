@@ -1135,6 +1135,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 113,
+            "title": "Medical Wellness Camp at Palika Kendra Dispensary",
+            "date": "2025-09-10",
+            "time": "10:30",
+            "brief": "Dr.Madan Narain to coordinate",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 732
