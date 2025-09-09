@@ -1125,6 +1125,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 112,
+            "title": "Visitors",
+            "date": "2025-09-09",
+            "time": "15:00",
+            "brief": "Sh.Rahul Khaneja, NDMC Kiosk Bust Stand, B.K.Dutt Colony reg. permanent water/sewer connection (Ref.Sh.Nripendra Mishra)",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 720
