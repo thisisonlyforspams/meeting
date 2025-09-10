@@ -1275,6 +1275,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 127,
+            "title": "Visitor",
+            "date": "2025-09-11",
+            "time": "15:00",
+            "brief": "Dr.Sanjeev Kumar, Teacher in Delhi Govt., Malcha Marg regarding Transfer",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 770
