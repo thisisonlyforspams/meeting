@@ -1068,16 +1068,6 @@
         },
         {
             "id": 106,
-            "title": "CM Book launch event at NDCC Ph-II",
-            "date": "2025-09-10",
-            "time": "15:30",
-            "brief": "",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 107,
             "title": "Standing Committee on Audit in NDMC (SCAN)",
             "date": "2025-09-10",
             "time": "15:00",
@@ -1087,7 +1077,7 @@
             "minutes_file": null
         },
         {
-            "id": 108,
+            "id": 107,
             "title": "Visitors",
             "date": "2025-09-08",
             "time": "15:00",
@@ -1097,7 +1087,7 @@
             "minutes_file": null
         },
         {
-            "id": 109,
+            "id": 108,
             "title": "Visitors",
             "date": "2025-09-08",
             "time": "15:00",
@@ -1107,7 +1097,7 @@
             "minutes_file": null
         },
         {
-            "id": 110,
+            "id": 109,
             "title": "Visitors",
             "date": "2025-09-08",
             "time": "15:00",
@@ -1117,7 +1107,7 @@
             "minutes_file": null
         },
         {
-            "id": 111,
+            "id": 110,
             "title": "Visitors",
             "date": "2025-09-09",
             "time": "15:00",
@@ -1127,7 +1117,7 @@
             "minutes_file": null
         },
         {
-            "id": 112,
+            "id": 111,
             "title": "Presentation on Solar Studs.",
             "date": "2025-09-09",
             "time": "16:00",
@@ -1137,7 +1127,7 @@
             "minutes_file": null
         },
         {
-            "id": 113,
+            "id": 112,
             "title": "Medical Wellness Camp at Palika Kendra Dispensary",
             "date": "2025-09-10",
             "time": "10:30",
@@ -1147,7 +1137,7 @@
             "minutes_file": null
         },
         {
-            "id": 114,
+            "id": 113,
             "title": "CM Book launch event at NDCC Ph-II",
             "date": "2025-09-10",
             "time": "15:30",
