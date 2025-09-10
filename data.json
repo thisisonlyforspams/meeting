@@ -1145,6 +1145,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 114,
+            "title": "Meeting with Adv Harsh Pichara",
+            "date": "2025-09-10",
+            "time": "16:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 755
