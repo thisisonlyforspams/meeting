@@ -1285,6 +1285,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 128,
+            "title": "Review of IT Department",
+            "date": "2025-09-11",
+            "time": "16:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 771
