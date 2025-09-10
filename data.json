@@ -1255,6 +1255,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 125,
+            "title": "Visitor",
+            "date": "2025-09-11",
+            "time": "15:00",
+            "brief": "Sh.Amit Gemawat, IFS, DCF P&M, Forest Deptt., GNCTD",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 768
