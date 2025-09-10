@@ -1155,6 +1155,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 115,
+            "title": "Review of ongoing Projects",
+            "date": "2025-09-11",
+            "time": "11:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 758
