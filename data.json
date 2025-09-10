@@ -1165,6 +1165,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 116,
+            "title": "Visitors",
+            "date": "2025-09-11",
+            "time": "15:00",
+            "brief": "Sh.N.V.Satyanarayana, IDES-1997",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 759
