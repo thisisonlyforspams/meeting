@@ -1175,6 +1175,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 117,
+            "title": "Visitors",
+            "date": "2025-09-11",
+            "time": "15:00",
+            "brief": "Sh.Robin Baleja, IDES-2013",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 760
