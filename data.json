@@ -1168,19 +1168,19 @@
         },
         {
             "id": 116,
-            "title": "Visitors",
-            "date": "2025-09-11",
-            "time": "15:00",
-            "brief": "Sh.Satyam Mohan, IDES-2015",
+            "title": "Review of Tax, Estate, Commercial & PMS",
+            "date": "2025-09-12",
+            "time": "11:00",
+            "brief": "",
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
         },
         {
             "id": 117,
-            "title": "Review of Tax, Estate, Commercial & PMS",
+            "title": "Visitors",
             "date": "2025-09-12",
-            "time": "11:00",
+            "time": "15:00",
             "brief": "",
             "minutes": "",
             "brief_file": null,
@@ -1198,16 +1198,6 @@
         },
         {
             "id": 119,
-            "title": "Visitors",
-            "date": "2025-09-12",
-            "time": "15:00",
-            "brief": "",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 120,
             "title": "Review of Health, Education & Welfare",
             "date": "2025-09-12",
             "time": "16:00",
@@ -1217,7 +1207,7 @@
             "minutes_file": null
         },
         {
-            "id": 121,
+            "id": 120,
             "title": "Presentation on Town Vending Committee [Secy, Dir(Enf-N/S) & CA]",
             "date": "2025-09-11",
             "time": "12:30",
@@ -1227,7 +1217,7 @@
             "minutes_file": null
         },
         {
-            "id": 122,
+            "id": 121,
             "title": "Visitor",
             "date": "2025-09-11",
             "time": "15:00",
@@ -1237,7 +1227,7 @@
             "minutes_file": null
         },
         {
-            "id": 123,
+            "id": 122,
             "title": "Visitor",
             "date": "2025-09-11",
             "time": "15:00",
@@ -1247,7 +1237,7 @@
             "minutes_file": null
         },
         {
-            "id": 124,
+            "id": 123,
             "title": "Visitor",
             "date": "2025-09-11",
             "time": "15:00",
@@ -1257,7 +1247,7 @@
             "minutes_file": null
         },
         {
-            "id": 125,
+            "id": 124,
             "title": "Review of IT Department",
             "date": "2025-09-11",
             "time": "16:00",
