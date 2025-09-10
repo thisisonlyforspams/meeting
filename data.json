@@ -1185,6 +1185,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 118,
+            "title": "Visitors",
+            "date": "2025-09-11",
+            "time": "15:00",
+            "brief": "Sh.Satyam Mohan, IDES-2015",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 761
