@@ -1265,6 +1265,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 126,
+            "title": "Visitor",
+            "date": "2025-09-11",
+            "time": "15:00",
+            "brief": "Sh.Bijender Sharma, DEO, NDMC regarding DPC",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 769
