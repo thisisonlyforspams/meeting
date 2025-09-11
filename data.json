@@ -1255,6 +1255,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 125,
+            "title": "Meeting with CP Delhi",
+            "date": "2025-09-12",
+            "time": "16:30",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 784
