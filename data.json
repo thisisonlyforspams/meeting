@@ -1265,6 +1265,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 126,
+            "title": "Presentation on Building Plan by Architect Department",
+            "date": "2025-09-12",
+            "time": "12:30",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 786
