@@ -1365,6 +1365,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 136,
+            "title": "Visitors",
+            "date": "2025-09-18",
+            "time": "15:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 1111
