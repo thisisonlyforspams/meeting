@@ -1305,6 +1305,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 130,
+            "title": "Visitors",
+            "date": "2025-09-17",
+            "time": "15:00",
+            "brief": "Mr.Abdul Siddiqui, Greynium Information & Tech Pvt.Ltd. reg.Swachhta Pakhwada 2025",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 1105
