@@ -1385,6 +1385,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 138,
+            "title": "Live Canvas Painting at Kartavya Path",
+            "date": "2025-09-19",
+            "time": "09:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 1113
