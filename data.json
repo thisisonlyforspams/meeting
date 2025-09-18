@@ -1445,6 +1445,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 144,
+            "title": "Meeting at HM Residence on Eco-Restoration at Delhi Ridge",
+            "date": "2025-09-20",
+            "time": "15:00",
+            "brief": "6A, Krishna Menon Marg [Dir(Hort) to coordinate]",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 1161
