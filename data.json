@@ -1425,6 +1425,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 142,
+            "title": "Meeting at President House",
+            "date": "2025-09-18",
+            "time": "17:15",
+            "brief": "Entry from Gate No.38",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 1156
