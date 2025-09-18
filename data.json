@@ -1435,6 +1435,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 143,
+            "title": "Visitor",
+            "date": "2025-09-18",
+            "time": "18:00",
+            "brief": "Sh.Rajesh Kumar (8860212223)",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 1157
