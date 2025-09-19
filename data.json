@@ -1408,16 +1408,6 @@
         },
         {
             "id": 140,
-            "title": "Visitors",
-            "date": "2025-09-19",
-            "time": "15:00",
-            "brief": "",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 141,
             "title": "Review of Health, Education & Welfare",
             "date": "2025-09-19",
             "time": "16:00",
@@ -1427,7 +1417,7 @@
             "minutes_file": null
         },
         {
-            "id": 142,
+            "id": 141,
             "title": "Meeting at President House",
             "date": "2025-09-18",
             "time": "17:15",
@@ -1437,7 +1427,7 @@
             "minutes_file": null
         },
         {
-            "id": 143,
+            "id": 142,
             "title": "Visitor",
             "date": "2025-09-18",
             "time": "18:00",
@@ -1447,7 +1437,7 @@
             "minutes_file": null
         },
         {
-            "id": 144,
+            "id": 143,
             "title": "Meeting at HM Residence on Eco-Restoration at Delhi Ridge",
             "date": "2025-09-20",
             "time": "17:00",
@@ -1457,7 +1447,7 @@
             "minutes_file": null
         },
         {
-            "id": 145,
+            "id": 144,
             "title": "Visitors",
             "date": "2025-09-19",
             "time": "15:00",
@@ -1467,7 +1457,7 @@
             "minutes_file": null
         },
         {
-            "id": 146,
+            "id": 145,
             "title": "Invitation for Unveiling Ceremony of Drainage Master Plan Delhi",
             "date": "2025-09-19",
             "time": "13:50",
