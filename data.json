@@ -1545,6 +1545,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 154,
+            "title": "Visitors",
+            "date": "2025-09-22",
+            "time": "15:00",
+            "brief": "Col.Vishal Kaushik, SE(BM)",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 1184
