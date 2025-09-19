@@ -1515,6 +1515,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 151,
+            "title": "Visitors",
+            "date": "2025-09-19",
+            "time": "15:00",
+            "brief": "Sh.SS Rao, Former Dir, NDMC",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 1178
