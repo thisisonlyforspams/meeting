@@ -1475,6 +1475,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 147,
+            "title": "Visitors",
+            "date": "2025-09-19",
+            "time": "15:00",
+            "brief": "Sh.Praveen Kumar & Ms.Megha Kashyap [Ref:Dr.Subodh Kumar, Darbhanga Kamtaul]",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 1172
