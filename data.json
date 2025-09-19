@@ -1605,6 +1605,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 160,
+            "title": "Review of Projects having High Value RFP/NIT",
+            "date": "2025-09-24",
+            "time": "11:00",
+            "brief": "",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 1192
