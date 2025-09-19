@@ -1505,6 +1505,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 150,
+            "title": "Visitors",
+            "date": "2025-09-22",
+            "time": "15:00",
+            "brief": "Ms.Rachna, Ernst & Young reg. Urban Development",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 1176
