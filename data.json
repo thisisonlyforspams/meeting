@@ -1465,6 +1465,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 146,
+            "title": "Visitors",
+            "date": "2025-09-19",
+            "time": "15:00",
+            "brief": "Ms.Priyam Krishna, RWA, Chanakyapuri",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 1171
