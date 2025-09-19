@@ -1488,16 +1488,6 @@
         },
         {
             "id": 148,
-            "title": "Review of Health, Education & Welfare Department",
-            "date": "2025-09-19",
-            "time": "16:00",
-            "brief": "",
-            "minutes": "",
-            "brief_file": null,
-            "minutes_file": null
-        },
-        {
-            "id": 149,
             "title": "TVC Meeting",
             "date": "2025-09-22",
             "time": "11:00",
@@ -1507,7 +1497,7 @@
             "minutes_file": null
         },
         {
-            "id": 150,
+            "id": 149,
             "title": "Visitors",
             "date": "2025-09-22",
             "time": "15:00",
@@ -1517,7 +1507,7 @@
             "minutes_file": null
         },
         {
-            "id": 151,
+            "id": 150,
             "title": "Visitors",
             "date": "2025-09-19",
             "time": "15:00",
