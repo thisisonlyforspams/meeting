@@ -1495,6 +1495,16 @@
             "minutes": "",
             "brief_file": null,
             "minutes_file": null
+        },
+        {
+            "id": 149,
+            "title": "TVC Meeting",
+            "date": "2025-09-22",
+            "time": "11:00",
+            "brief": "[Convention Center]",
+            "minutes": "",
+            "brief_file": null,
+            "minutes_file": null
         }
     ],
     "hits": 1175
